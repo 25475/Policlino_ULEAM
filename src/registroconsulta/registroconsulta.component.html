@@ -1,0 +1,36 @@
+
+  <head>
+    <title>Registro de consulta</title>
+  </head>
+  <body>
+    <main>
+      <form [formGroup]="registroForm" (ngSubmit)="submitForm()">
+    <h1>Registro de consulta</h1>
+  <label for="nombre">Nombre del paciente:</label>
+  <input type="text" id="nombre" formControlName="nombre" >
+
+  <label for="fecha">Fecha de consulta:</label>
+  <input type="date" id="fecha" formControlName="fecha" >
+
+  <label for="hora">Hora de consulta:</label>
+  <input type="time" id="hora" formControlName="hora" >
+
+  <label for="medico">Médico:</label>
+  <input type="text" id="medico" formControlName="medico" >
+
+  <label for="sintomas">Síntomas:</label>
+  <input type="text"id="sintomas" formControlName="sintomas" >
+
+  <label for="diagnostico">Diagnóstico:</label>
+  <input type="text" id="diagnostico" formControlName="diagnostico" >
+
+  <label for="tratamiento">Tratamiento:</label>
+  <input type="text" id="tratamiento" formControlName="tratamiento" >
+
+  <input type="submit" value="Enviar"[disabled]="!registroForm.valid">
+       <span *ngIf="!registroForm.valid && registroForm.touched">Por favor, completa todos los campos.</span>
+</form>
+</main>
+  </body>
+
+

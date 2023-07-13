@@ -1,0 +1,44 @@
+<head>
+  <title>Búsqueda de pacientes por historial clínico</title>
+</head>
+<body>
+  <main>
+    <form>
+      <h1>Búsqueda de pacientes por historial clínico</h1>
+
+      <label for="historial">Ingrese el número de historial clínico:</label>
+      <input type="number" id="historial" name="historial" placeholder="Introduzca el número de historial clínico del paciente">
+      <input type="submit" value="Buscar" (click)="buscar()">
+    </form>
+    <table *ngIf="pacienteEncontrado">
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Teléfono</th>
+        <th>Edad</th>
+        <th>Correo Electrónico</th>
+        <th>Género</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Dirección</th>
+        <th>Cédula</th>
+        <th>Enfermedad</th>
+        <th>Alergia</th>
+        <th>Tipo de Sangre</th>
+      </tr>
+      <tr>
+        <td>{{ pacienteEncontrado?.nombre }}</td>
+        <td>{{ pacienteEncontrado?.apellido }}</td>
+        <td>{{ pacienteEncontrado?.telefono }}</td>
+        <td>{{ pacienteEncontrado?.edad }}</td>
+        <td>{{ pacienteEncontrado?.email }}</td>
+        <td>{{ pacienteEncontrado?.genero }}</td>
+        <td>{{ pacienteEncontrado?.fecha_nacimiento }}</td>
+        <td>{{ pacienteEncontrado?.direccion }}</td>
+        <td>{{ pacienteEncontrado?.cedula }}</td>
+        <td>{{ pacienteEncontrado?.enfermedades }}</td>
+        <td>{{ pacienteEncontrado?.alergia }}</td>
+        <td>{{ pacienteEncontrado?.tiposangre }}</td>
+      </tr>
+    </table>
+  </main>
+</body>

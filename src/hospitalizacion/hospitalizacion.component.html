@@ -1,0 +1,40 @@
+
+  <head>
+    <title>Detalles de hospitalizacion del paciente</title>
+  </head>
+  <body>
+    <main>
+    <form [formGroup]="registroForm" (ngSubmit)="submitForm()">
+    <div class="paciente-hospitalizado">
+  <h1>Detalles de la hospitalización del paciente</h1>
+  <div class="detalles">
+
+    <label for="fecha_ingreso">Fecha de ingreso:</label>
+    <input type="date" id="fecha_ingreso"formControlName="fecha_ingreso">
+
+    <label for="fecha_salida">Fecha de salida:</label>
+    <input type="date" id="fecha_salida" formControlName="fecha_salida">
+
+    <label for="cama">Número de cama de hospitalización:</label>
+    <input type="number" id="cama" formControlName="cama">
+
+    <label for="motivo_hospitalizacion">Motivo de la hospitalización:</label>
+    <input type="text" id="motivo_hospitalizacion" formControlName="motivo_hospitalizacion" >
+
+
+    <label for="diagnostico">Diagnóstico:</label>
+    <input type="text" id="diagnostico" formControlName="diagnostico" >
+
+    <label for="tratamiento">Tratamiento:</label>
+    <input type="text" id="tratamiento" formControlName="tratamiento">
+
+    <input type="submit" value="Enviar"[disabled]="!registroForm.valid">
+        <span *ngIf="!registroForm.valid && registroForm.touched">Por favor, completa todos los campos.</span>
+
+  </div>
+    </div>
+    </form>
+  </main>
+  </body>
+
+

@@ -1,0 +1,45 @@
+
+<head>
+    <title>Bienvenidos a policlínico ULEAM</title>
+</head>
+<body>
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido al sistema del policlinico ULEAM</h2>
+                <p>Si ya tienes una cuenta por favor inicia sesión aquí</p>
+                <p>👇👇</p>
+                <button type="submit" class="sign-up-btn" (click)="handleSignIn()">Iniciar Sesión</button>
+                <p>¿No tienes cuenta? Registrate  👉 </p>
+            </div>
+        </div>
+         <div class="formulario">
+          <form  [formGroup]="formReg" (ngSubmit)="onSubmit()">
+              <h2 class="create-account">Crear una cuenta</h2>
+              <input type="text" formControlName="email" placeholder="Correo">
+              <input type="password" formControlName="password" placeholder="Contraseña">
+              <input type="submit" value ="registrate" >
+          </form>
+        </div>
+        </div>
+    <div class="container-form sign-in" id="formulario2">
+      <div class="formulario">
+          <form  [formGroup]="formLogin" (ngSubmit)="onValidar()">
+          <br><br><br><br><br>
+            <h2 class="create-account">Ingresa tu usuario y contraseña</h2>
+            <input type="text" formControlName="email" placeholder="Correo">
+            <input type="password" formControlName="password" placeholder="Contraseña">
+            <input  type="submit" value ="Entrar" >
+            <button class="btn btn-info" (click)="onClick()">Continuar con Google</button>
+        </form>
+      </div>
+        <div class="welcome-back">
+            <div class="message">
+                <h2>Bienvenido de nuevo</h2>
+                <p>Si aún no tienes una cuenta, por favor regístrate aquí</p>
+                <button type="submit" class="sign-in-btn" (click)="handleSignUp()">Registrarse</button>
+            </div>
+        </div>
+    </div>
+
+</body>

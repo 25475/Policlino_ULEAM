@@ -1,0 +1,60 @@
+
+  <head>
+    <title>Registro de Historias Clínicas</title>
+  </head>
+  <body>
+    <main>
+      <form [formGroup]="registroForm" (ngSubmit)="submitForm()">
+        <h1>Registro de Historias Clínicas</h1>
+
+        <label for="nombre">Nombres:</label><br>
+        <input type="text" id="nombre"formControlName="nombre"  ><br><br>
+
+        <label for="apellido">Apellidos:</label><br>
+        <input type="text" id="apellido" formControlName="apellido" ><br><br>
+
+        <label for="cedula">Cédula:</label><br>
+        <input type="number" id="cedula"formControlName="cedula" ><br><br>
+
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" formControlName="edad" ><br><br>
+
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label><br>
+        <input type="date" id="fecha_nacimiento" formControlName="fecha_nacimiento" ><br><br>
+
+        <label for="genero">Género:</label><br>
+        <select id="genero" name="genero" formControlName="genero">
+          <option value="">- Seleccionar -</option>
+          <option value="Hombre">Hombre</option>
+          <option value="Mujer">Mujer</option>
+      </select>
+
+
+        <label for="direccion">Dirección:</label><br>
+        <input type="text" id="direccion" formControlName="direccion" ><br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="number" id="telefono" formControlName="telefono" ><br><br>
+
+        <label for="email">Correo electrónico:</label><br>
+        <input type="text" id="email"formControlName="email" ><br><br>
+
+        <label for="tiposangre">Tipo de sangre:</label><br>
+        <input type="text" id="tiposangre" formControlName="tiposangre" ><br><br>
+
+        <label for="alergia">Alergias:</label><br>
+        <input type="text" id="alergia" formControlName="alergia" ><br><br>
+
+        <label for="enfermedades">Enfermedades:</label><br>
+        <input type="text" id="enfermedades" formControlName="enfermedades" ><br><br>
+
+        <label for="historial">N° Historial clínico:</label><br>
+        <input type="number" id="historial" formControlName="historial" placeholder="ingrese un número de historial clínico"><br><br>
+
+        <input type="submit" value="Enviar"[disabled]="!registroForm.valid">
+        <span *ngIf="!registroForm.valid && registroForm.touched">Por favor, completa todos los campos.</span>
+
+      </form>
+    </main>
+  </body>
+

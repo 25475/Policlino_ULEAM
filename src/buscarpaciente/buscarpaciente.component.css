@@ -1,0 +1,82 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  background-image: url(../assets/imagen/imagen1.jpg);
+}
+
+h1 {
+  text-align: center;
+  margin: 80px 0 20px 0;
+  font-family:'Times New Roman', Times, serif;
+  color: rgb(11, 12, 10);
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilos del formulario de búsqueda */
+form {
+  height: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
+ width: 450px;
+ padding: 20px;
+ background-color: rgba(85, 83, 83, 0.602);
+ box-shadow: 0 0 10px #111111;
+ border-radius: 10px;
+ justify-content: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+
+}
+
+input[type="number"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+
+}
+
+input[type="submit"] {
+  background-color: #cae6ca;
+  color: rgb(12, 12, 12);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  align-items: flex-end;
+}
+
+input[type="submit"]:hover {
+  background-color: #95b3eb;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+

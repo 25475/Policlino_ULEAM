@@ -1,0 +1,86 @@
+form{
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
+ width: 600px;
+ padding: 20px;
+ background-color: rgba(85, 83, 83, 0.602);
+ box-shadow: 0 0 10px #111111;
+ border-radius: 10px;
+}
+body{
+  background-image: url(../assets/imagen/imagen1.jpg);
+}
+.paciente-hospitalizado {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.paciente-hospitalizado h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.detalles label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.detalles input[type="date"],
+.detalles textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.detalles input[type="number"]{
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.detalles textarea {
+  height: 100px;
+}
+button[type="submit"] {
+  padding: 10px 30px;
+  background-color: #4c6ba5;
+  color: rgb(12, 4, 4);
+  border-radius: 5px;
+  border: none;
+  font-size: 16px ;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+  background-color: #6d97f3;
+}
+
+input[type="submit"] {
+  width: 80%;
+  margin-top: 30px;
+  background-color: #cae6ca;
+  color: rgb(12, 12, 12);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  align-items: flex-end;
+}
+
+input[type="submit"]:hover {
+  background-color: #95b3eb;
+}
+
+input[type="text"] {
+  height: 40px;;
+  width: 500px;
+}
+
+
